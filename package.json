@@ -1,0 +1,14 @@
+{
+  "name": "polynomialadder",
+  "version": "1.0.0",
+  "description": "Polynomial Adder application.",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Szymon Wietowski",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  }
+}

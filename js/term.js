@@ -5,6 +5,10 @@ class Term {
         this.exponent = exponent;
     }
 
+    fromString(inputString) {
+        console.log(inputString)
+    }
+
     add(term) {
         if(term.exponent == this.exponent)
             this.coefficient += term.coefficient;

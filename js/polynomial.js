@@ -9,6 +9,19 @@ class Polynomial {
         terms.forEach(term => this.addTerm(term));
     }
 
+    fromString(inputString) {
+        let terms = [];
+        let prev = 0;
+        for(let i=1; i < inputString.length; i++) {
+            if(inputString[i] == '+' || inputString[i] == '-') {
+                terms.push(new Term().fromString(inputString.substring(prev, i)));
+                prev = i;
+            }
+        }
+        terms.push(new Term().fromString(inputString.substring(prev, inputString.length)));
+        terms.forEach(term => this.addTerm(term));
+    }
+
     add(polymonial) {
         for(let term of polymonial.terms.values())
             this.addTerm(term);

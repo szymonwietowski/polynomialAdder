@@ -11,6 +11,11 @@ function addPolynomials(polynomial1, polynomial2) {
     return result;
 }
 
+function sayHello(a,b) {
+    let aa = new Polynomial().fromString(a.value);
+    let bb = new Polynomial().fromString(b.value);
+}
+
 let pol1 = new Polynomial(new Term(2,2), new Term(3,0));
 let pol2 = new Polynomial();
 pol2.addTerm(new Term(-3,3))

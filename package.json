@@ -4,6 +4,7 @@
   "description": "Polynomial Adder application.",
   "main": "js/main.js",
   "scripts": {
+    "start": "electron .",
     "test": "mocha"
   },
   "author": "Szymon Wietowski",

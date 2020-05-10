@@ -1,0 +1,20 @@
+label {
+    font-size: 16px;
+    margin: 4px;
+}
+#result {
+    font-weight: bold;
+}
+.input {
+    font-size: 16px;
+    margin: 4px;
+}
+.submit-button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px;
+}

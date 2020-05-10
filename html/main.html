@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' type='text/css' href='../css/main.css'/>
         <script src='../js/polynomialAdder.js'></script>
     </head>
 
     <body>
-        <form action='JavaScript:addPolynomialsFromInput(a,b)'>
-            <input type='text' id='a' value='-3x3 - 4x-2 +3'/>
-            <input type='text' id='b' value='2x - 2'/>
-            <input type='submit' value='Add Expressions'/>
-            <label id='result'></label>
-        </form>
+        <div>
+            <form action='JavaScript:addPolynomialsFromInput(a,b)'>
+                <label>Expressions to add: </label>
+                <input calss='input' type='text' id='a' placeholder='eg: -3x3 - 4x-2 +3'/>
+                <input calss='input' type='text' id='b' placeholder='eg: 2x - 2'/>
+                <br>
+                <input class='submit-button' type='submit' value='Add Expressions'/>
+                <br>
+                <label>Result: </label>
+                <label id='result'></label>
+            </form>
+        </div>
     </body>
 </html>

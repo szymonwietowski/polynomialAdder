@@ -1,14 +1,14 @@
 const {app, BrowserWindow, Menu} = require('electron')
 
 // SET ENV
-process.env.NODE_ENV = 'dev';
+process.env.NODE_ENV = 'prod';
 
 function createMianWindow() {
 
     const mainWindow = new BrowserWindow({
         webPreferences: {
-            width: 800,
-            height: 800,
+            width: 400,
+            height: 400,
             nodeIntegration: true
         }
     });

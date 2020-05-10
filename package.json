@@ -2,8 +2,9 @@
   "name": "polynomialadder",
   "version": "1.0.0",
   "description": "Polynomial Adder application.",
-  "main": "js/main.js",
+  "main": "js/polynomialAdder.js",
   "scripts": {
+    "start": "node .",
     "test": "mocha"
   },
   "author": "Szymon Wietowski",

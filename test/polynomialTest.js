@@ -53,6 +53,14 @@ describe('Polynomial tests', () => {
             poly1.add(poly2);
             assert.deepEqual(poly1, expected);
         });
+
+        it('should add another polynomial to existing', () => {
+            let poly1 = new Polynomial(new Term(-3, 3), new Term(-4, -2), new Term(3, 0));
+            let poly2 = new Polynomial(new Term(2, 1), new Term(-2, 0));
+            let expected = new Polynomial(new Term(-3, 3), new Term(-4, -2), new Term(1, 0), new Term(2, 1));
+            poly1.add(poly2);
+            assert.deepEqual(poly1, expected);
+        });
     });
 
     describe('toString method', () => {
@@ -69,6 +77,11 @@ describe('Polynomial tests', () => {
         it('should return "-3 + 2x<sup>-1</sup>"', () => {
             let poly = new Polynomial(new Term(0, 3), new Term(2, -1), new Term(-3, 0));
             assert.equal(poly.toString(), '-3 + 2x<sup>-1</sup>');
+        });
+
+        it('should return "-3x<sup>3</sup> + 2x<sup>1</sup> + 1 - 4x<sup>-2</sup>"', () => {
+            let poly = new Polynomial(new Term(-3, 3), new Term(-4, -2), new Term(1, 0), new Term(2, 1));
+            assert.equal(poly.toString(), '-3x<sup>3</sup> + 2x + 1 - 4x<sup>-2</sup>');
         });
     });
 });

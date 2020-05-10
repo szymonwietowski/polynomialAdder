@@ -10,16 +10,9 @@ class Polynomial {
     }
 
     fromString(inputString) {
-        let terms = [];
-        let prev = 0;
-        for(let i=1; i < inputString.length; i++) {
-            if(inputString[i] == '+' || inputString[i] == '-') {
-                terms.push(new Term().fromString(inputString.substring(prev, i)));
-                prev = i;
-            }
-        }
-        terms.push(new Term().fromString(inputString.substring(prev, inputString.length)));
-        terms.forEach(term => this.addTerm(term));
+        let termStrings = inputString.match(/[+-]?\s?\d+[a-zA-Z]?-?\d*/g);
+        termStrings.forEach(termString => this.addTerm(new Term().fromString(termString)));
+        return this;
     }
 
     add(polymonial) {

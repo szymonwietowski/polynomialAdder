@@ -11,20 +11,11 @@ function addPolynomials(polynomial1, polynomial2) {
     return result;
 }
 
-function sayHello(a,b) {
-    let aa = new Polynomial().fromString(a.value);
-    let bb = new Polynomial().fromString(b.value);
-}
+function addPolynomialsFromInput(input1, input2) {
+    let poly1 = new Polynomial().fromString(input1.value);
+    let poly2 = new Polynomial().fromString(input2.value);
 
-let pol1 = new Polynomial(new Term(2,2), new Term(3,0));
-let pol2 = new Polynomial();
-pol2.addTerm(new Term(-3,3))
-pol2.addTerm(new Term(-2,2))
-console.log(addPolynomials(pol1, pol2).toString())
-console.log(pol1.toString()) // 3
-let pol3 = new Polynomial(new Term(4,0), new Term(-8,-2));
-console.log(pol3.toString())
-console.log(addPolynomials(pol1, pol3).toString())
-console.log(new Term(-1,2).toString())
+    document.getElementById('result').innerHTML = addPolynomials(poly1, poly2).toString();
+}
 
 module.exports = addPolynomials;

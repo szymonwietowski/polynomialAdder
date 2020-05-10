@@ -6,7 +6,17 @@ class Term {
     }
 
     fromString(inputString) {
-        console.log(inputString)
+        let coefficientRes = inputString.match(/^[-+]?\s?\d+/);
+        let exponentRes = inputString.match(/[a-zA-Z]-?\d*/);
+        let coefficient = coefficientRes != null ? parseInt(coefficientRes[0].replace(' ', '')) : 1;
+        let exponent = 0;
+        if(exponentRes != null)
+            exponent = exponentRes[0].length == 1 ? 1 : parseInt(exponentRes[0].slice(1));
+        
+        this.coefficient = coefficient;
+        this.exponent = exponent;
+
+        return this;
     }
 
     add(term) {
